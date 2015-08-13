@@ -12,12 +12,17 @@ client = Twitter::REST::Client.new do |config|
   config.access_token        = "    "
   config.access_token_secret = "    "
 end
- 
+
+ #Time
+time = Time.now
+
 loop {
   puts "ツイート内容を入力して下さい"
   tweet = gets.chomp
 if tweet == "cancel"
   puts "中止します"
+elsif tweet == "times"
+  client.update(time)
 else
   client.update(tweet)
 end
