@@ -23,6 +23,8 @@ if tweet == "cancel"
   puts "中止します"
 elsif tweet == "times"
   client.update(time)
+elsif tweet == "utaha"
+  client.update("霞ヶ丘詩羽")
 else
   client.update(tweet)
 end
